@@ -11,21 +11,29 @@
 			<tr>
 				<td>ID</td>
 				<td>Nome</td>
-				<td>Sobrenome</td>
-				<td>Endereço</td>
+				<td>Rua</td>
 				<td>Número</td>
+				<td>Bairro</td>
+				<td>Cidade</td>
+				<td>Estado</td>
 				<td>Telefone</td>
-				<td>Deletar</td>
+				<td>CPF</td>
+				<td>E-mail</td>
+				<td>Excluir</td>
 				<td>Editar</td>
 			</tr>
 			{% for pessoa in pessoas %}
 				<tr>
 					<td>{{ pessoa._id }}</td>
-					<td>{{ pessoa.nome }}</a></td>
-					<td>{{ pessoa.sobrenome }}</td>
-					<td>{{ pessoa.endereco }}</td>
+					<td>{{ pessoa.nome }}</td>
+					<td>{{ pessoa.rua }}</td>
 					<td>{{ pessoa.numero }}</td>
-					<td>{{ pessoa.telefone }}</td>
+					<td>{{ pessoa.bairro }}</td>
+					<td>{{ pessoa.cidade }}</td>
+					<td>{{ pessoa.estado }}</td>
+					<td>{{ pessoa.fone }}</td>
+					<td>{{ pessoa.cpf }}</td>
+					<td>{{ pessoa.email }}</td>
 					<td><center><a href="/excluir/{{ pessoa._id }}"><input type="submit" value="x"></a></center></td>
 					<td><center><a href="/atualizar/{{ pessoa._id }}"><input type="submit" value="editar"></a></center></td>
 				</tr>

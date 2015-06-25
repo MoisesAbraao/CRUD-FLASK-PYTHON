@@ -16,17 +16,25 @@ class Pessoa(db.Model):
 	__tablename__ = 'pessoa'
 	_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 	nome = db.Column(db.String)
-	sobrenome = db.Column(db.String)
-	endereco = db.Column(db.String)
+	rua = db.Column(db.String)
 	numero = db.Column(db.String)
-	telefone = db.Column(db.String)
+	bairro = db.Column(db.String)
+	cidade = db.Column(db.String)
+	estado = db.Column(db.String)
+	fone = db.Column(db.String)
+	cpf = db.Column(db.String)
+	email = db.Column(db.String)
 
-	def __init__(self, nome, sobrenome, endereco, numero, telefone):
+	def __init__(self, nome, rua, numero, bairro, cidade, estado, fone, cpf, email):
 		self.nome = nome
-		self.sobrenome = sobrenome
-		self.endereco = endereco
+		self.rua = rua
 		self.numero = numero
-		self.telefone = telefone
+		self.bairro = bairro
+		self.cidade = cidade
+		self.estado = estado
+		self.fone = fone
+		self.cpf = cpf
+		self.email = email
 
 
 db.create_all()
@@ -48,12 +56,17 @@ def voltar():
 def cadastro():
 	if request.method == "POST":
 		nome = (request.form.get("nome"))
-		sobrenome = (request.form.get("sobrenome"))
-		endereco = (request.form.get("endereco"))
+		rua = (request.form.get("rua"))
 		numero = (request.form.get("numero"))
-		telefone = (request.form.get("telefone"))
-		if nome and sobrenome and endereco and numero and telefone:
-			p = Pessoa(nome, sobrenome, endereco, numero, telefone)
+		bairro = (request.form.get("bairro"))
+		cidade = (request.form.get("cidade"))
+		estado = (request.form.get("estado"))
+		fone = (request.form.get("fone"))
+		cpf = (request.form.get("cpf"))
+		email = (request.form.get("email"))
+
+		if nome and rua and numero and bairro and cidade and estado and fone and cpf and email:
+			p = Pessoa(nome, rua, numero, bairro, cidade, estado, fone, cpf, email)
 			db.session.add(p)
 			db.session.commit()
 	return redirect(url_for("home"))
@@ -68,16 +81,23 @@ def atualizar(id):
 	pessoa = Pessoa.query.filter_by(_id=id).first()
 	if request.method == "POST":
 		nome = (request.form.get("nome"))
-		sobrenome = (request.form.get("sobrenome"))
-		endereco = (request.form.get("endereco"))
+		rua = (request.form.get("rua"))
 		numero = (request.form.get("numero"))
-		telefone = (request.form.get("telefone"))
-		if nome and sobrenome and endereco and numero and telefone:
+		bairro = (request.form.get("bairro"))
+		cidade = (request.form.get("cidade"))
+		estado = (request.form.get("estado"))
+		fone = (request.form.get("fone"))
+		email = (request.form.get("email"))
+
+		if nome and rua and numero and bairro and cidade and estado and fone and email:
 			pessoa.nome = nome
-			pessoa.sobrenome = sobrenome
-			pessoa.endereco = endereco
+			pessoa.rua= rua
 			pessoa.numero = numero
-			pessoa.telefone = telefone
+			pessoa.bairro = bairro
+			pessoa.cidade = cidade
+			pessoa.estado = estado
+			pessoa.fone = fone
+			pessoa.email = email
 			db.session.commit()
 
 	return render_template("atualizar.html", pessoa=pessoa)

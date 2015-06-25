@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cadastro</title>
+	</head>
+	<body>
+		<h1>Atualizar Cliente</h1>
+		<hr>
+		<form method="POST" action="">
+			<table>
+					<tr>
+						<td>Nome:</td>
+						<td><input type="text" name="nome" value="{{ pessoa.nome }}"></td>
+					</tr>
+					<tr>
+						<td>Sobrenome:</td>
+						<td><input type="text" name="sobrenome" value="{{ pessoa.sobrenome }}"></td>
+					</tr>
+					<tr>
+						<td>Endereço:</td>
+						<td><input type="text" name="endereco" value="{{ pessoa.endereco }}"></td>
+					</tr>
+					<tr>
+						<td>Número:</td>
+						<td><input type="text" name="numero" value="{{ pessoa.numero }}"></td>
+					</tr>
+					<tr>
+						<td>Telefone:</td>
+						<td><input type="text" name="telefone" value="{{ pessoa.telefone }}"></td>
+					</tr>
+				</table>
+				<input type="submit" value="Atualizar">
+				<a href="{{ url_for('lista') }}"><input type="button" value="Voltar"></a>
+		</form>
+	</body>
+</html>

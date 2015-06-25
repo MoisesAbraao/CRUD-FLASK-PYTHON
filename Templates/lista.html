@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pesquisar</title>
+		<meta charset = "UTF-8">
+	</head>
+	<body>
+		<h1>Lista de Clientes</h1>
+		<hr>
+		<table border="3" width="100%">
+			<tr>
+				<td>ID</td>
+				<td>Nome</td>
+				<td>Sobrenome</td>
+				<td>Endereço</td>
+				<td>Número</td>
+				<td>Telefone</td>
+				<td>Deletar</td>
+				<td>Editar</td>
+			</tr>
+			{% for pessoa in pessoas %}
+				<tr>
+					<td>{{ pessoa._id }}</td>
+					<td>{{ pessoa.nome }}</a></td>
+					<td>{{ pessoa.sobrenome }}</td>
+					<td>{{ pessoa.endereco }}</td>
+					<td>{{ pessoa.numero }}</td>
+					<td>{{ pessoa.telefone }}</td>
+					<td><center><a href="/excluir/{{ pessoa._id }}"><input type="submit" value="x"></a></center></td>
+					<td><center><a href="/atualizar/{{ pessoa._id }}"><input type="submit" value="editar"></a></center></td>
+				</tr>
+			{% endfor %}
+		</table>
+		<a href="{{ url_for('home') }}"><input type="button" value="Voltar"></a>
+	</body>
+</html>

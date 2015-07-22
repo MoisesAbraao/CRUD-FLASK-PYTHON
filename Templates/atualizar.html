@@ -3,47 +3,60 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Cadastro</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="../static/estilo.css">
+
 	</head>
 	<body>
-		<h1>Atualizar Cliente</h1>
-		<hr>
-		<form method="POST" action="">
-			<table>
-					<tr>
-						<td>Nome:</td>
-						<td><input type="text" name="nome" value="{{ pessoa.nome }}"></td>
-					</tr>
-					<tr>
-						<td>Rua:</td>
-						<td><input type="text" name="rua" value="{{ pessoa.rua }}"></td>
-					</tr>
-					<tr>
-						<td>Número:</td>
-						<td><input type="text" name="numero" value="{{ pessoa.numero }}"></td>
-					</tr>
-					<tr>
-						<td>Bairro:</td>
-						<td><input type="text" name="bairro" value="{{ pessoa.bairro }}"></td>
-					</tr>
-					<tr>
-						<td>Cidade:</td>
-						<td><input type="text" name="cidade" value="{{ pessoa.cidade }}"></td>
-					</tr>
-					<tr>
-						<td>Estado:</td>
-						<td><input type="text" name="estado" value="{{ pessoa.estado }}"></td>
-					</tr>
-					<tr>
-						<td>Telefone:</td>
-						<td><input type="text" name="fone" value="{{ pessoa.fone }}"></td>
-					</tr>
-					<tr>
-						<td>E-mail:</td>
-						<td><input type="text" name="email" value="{{ pessoa.email }}"></td>
-					</tr>
-				</table>
-				<input type="submit" value="Atualizar">
-				<a href="{{ url_for('lista') }}"><input type="button" value="Voltar"></a>
-		</form>
+		<div class="page-header">
+			<h1>Atualizar Cliente</h1>
+		</div>
+		<div class="panel-body">
+			<form class="navbar-form navbar-left" method="POST" action="">
+				<table>
+						<tr>
+							<td>Nome:</td>
+							<td><input type="text" class="form-control" name="nome" value="{{ pessoa.nome }}"></td>
+						</tr>
+						<tr>
+							<td>Rua:</td>
+							<td><input type="text" class="form-control" name="rua" value="{{ pessoa.rua }}"></td>
+						</tr>
+						<tr>
+							<td>Número:</td>
+							<td><input type="text" class="form-control" name="numero" value="{{ pessoa.numero }}"></td>
+						</tr>
+						<tr>
+							<td>Bairro:</td>
+							<td><input type="text" class="form-control" name="bairro" value="{{ pessoa.bairro }}"></td>
+						</tr>
+						<tr>
+							<td>Cidade:</td>
+							<td><input type="text" class="form-control" name="cidade" value="{{ pessoa.cidade }}"></td>
+						</tr>
+						<tr>
+							<td>Estado:</td>
+							<td><input type="text" class="form-control" name="estado" value="{{ pessoa.estado }}"></td>
+						</tr>
+						<tr>
+							<td>Telefone:</td>
+							<td><input type="text" class="form-control" name="fone" value="{{ pessoa.fone }}"></td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td><input type="text" class="form-control" name="email" value="{{ pessoa.email }}"></td>
+						</tr>
+					</table><br>
+				<input type="submit" class="btn btn-primary btn-lg" value="Atualizar">
+				<a href="{{ url_for('lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+			</form>
+		</div>
 	</body>
 </html>

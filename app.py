@@ -69,6 +69,7 @@ def cadastro():
 			p = Pessoa(nome, rua, numero, bairro, cidade, estado, fone, cpf, email)
 			db.session.add(p)
 			db.session.commit()
+			
 	return redirect(url_for("home"))
 
 @app.route("/lista")

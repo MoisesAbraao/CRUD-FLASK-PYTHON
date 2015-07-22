@@ -3,51 +3,64 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Cadastro</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="../static/estilo.css">
+
 	</head>
 	<body>
-		<h1>Cadastrar Cliente</h1>
-		<hr>
-		<form action="{{ url_for('cadastro') }}" method="POST">
-			<table>
-					<tr>
-						<td>Nome:</td>
-						<td><input type="text" name="nome"></td>
-					</tr>
-					<tr>
-						<td>Rua:</td>
-						<td><input type="text" name="rua"></td>
-					</tr>
-					<tr>
-						<td>Número:</td>
-						<td><input type="text" name="numero"></td>
-					</tr>
-					<tr>
-						<td>Bairro:</td>
-						<td><input type="text" name="bairro"></td>
-					</tr>
-					<tr>
-						<td>Cidade:</td>
-						<td><input type="text" name="cidade"></td>
-					</tr>
-					<tr>
-						<td>Estado:</td>
-						<td><input type="text" name="estado"></td>
-					</tr>
-					<tr>
-						<td>Telefone:</td>
-						<td><input type="text" name="fone"></td>
-					</tr>
-					<tr>
-						<td>CPF:</td>
-						<td><input type="text" name="cpf"></td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td><input type="text" name="email"></td>
-					</tr>
-				</table>
-				<input type="submit" value="Salvar Cadastro"/>
-				<a href="{{ url_for('home') }}"><input type="button" value="Voltar"></a>
-		</form>
+		<div class="page-header">
+			<h1>Cadastrar Cliente</h1>
+		</div>
+		<div class="panel-body">
+			<form class="navbar-form navbar-left" action="{{ url_for('cadastro') }}" method="POST">
+				<table>
+						<tr>
+							<td>Nome:</td>
+							<td><input type="text" class="form-control" name="nome"></td>
+						</tr>
+						<tr>
+							<td>Rua:</td>
+							<td><input type="text" class="form-control" name="rua"></td>
+						</tr>
+						<tr>
+							<td>Número:</td>
+							<td><input type="text" class="form-control" name="numero"></td>
+						</tr>
+						<tr>
+							<td>Bairro:</td>
+							<td><input type="text" class="form-control" name="bairro"></td>
+						</tr>
+						<tr>
+							<td>Cidade:</td>
+							<td><input type="text" class="form-control" name="cidade"></td>
+						</tr>
+						<tr>
+							<td>Estado:</td>
+							<td><input type="text" class="form-control" name="estado"></td>
+						</tr>
+						<tr>
+							<td>Telefone:</td>
+							<td><input type="text" class="form-control" name="fone"></td>
+						</tr>
+						<tr>
+							<td>CPF:</td>
+							<td><input type="text" class="form-control" name="cpf"></td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td><input type="text" class="form-control" name="email"></td>
+						</tr>
+					</table><br>
+					<input type="submit" class="btn btn-primary btn-lg" value="Salvar Cadastro"/>
+					<a href="{{ url_for('home') }}" ><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+			</form>
+		</div>
 	</body>
 </html>

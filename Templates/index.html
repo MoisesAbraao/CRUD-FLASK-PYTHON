@@ -3,11 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Tela Inicial</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="../static/estilo.css">
 	</head>
 	<body>
-		<h1>Tela Inicial</h1>
-		<hr>
-		<a href="{{ url_for('cadastrar') }}"><input type="submit" value="Cadastro de Clientes"></a><br>
-		<a href="{{ url_for('lista') }}"><input type="submit" value="Lista de Clientes"></a><br>		
+		<div class="page-header">
+			<h1>Tela Inicial</h1>
+		</div>
+		<div class="btn-group">
+			<a href="{{ url_for('cadastrar') }}"><input type="button" class="btn btn-primary btn-lg" value="Cadastro de Clientes"></a>
+
+			<a href="{{ url_for('lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Lista de Clientes"></a>	
+		</div>	
 	</body>
 </html>

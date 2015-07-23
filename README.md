@@ -3,3 +3,4 @@ CRUD básico com FLASK+PYTHON. Um sisteminha de cadastro de clientes. Muito simp
 
 # Para usar o sistema
   * pip install -r requirements.txt
+  * python app.py

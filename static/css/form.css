@@ -1,0 +1,34 @@
+form p {
+    margin: 0;
+}
+
+form .first {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+form .mid {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+form .last {
+    margin-top: -1px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.comp-info {
+    font-size: 12px;
+}
+
+.helper {
+    margin-top: 10px;
+    float: right;
+    text-align: right;
+}

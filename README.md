@@ -3,7 +3,7 @@ This is a basic CRUD with the Flask framework and Python. It's a small system of
 
 #To use the System
  * pip install -r requirements.txt
- * pythoh app.py
+ * python app.py
 
 
 # CRUD-FLASK-PYTHON
@@ -12,5 +12,3 @@ CRUD básico com FLASK+PYTHON. Um sisteminha de cadastro de clientes. Muito simp
 # Para usar o sistema
   * pip install -r requirements.txt
   * python app.py
-  
-

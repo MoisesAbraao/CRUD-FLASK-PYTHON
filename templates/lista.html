@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pesquisar</title>
+		<meta charset="UTF-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="static/js/bootstrap.min.js"></script>
+	<body>
+		<div class="page-header">
+			<h1>Lista de Clientes</h1>
+		</div>
+		<table  class="table" border="4">
+			<tr>
+				<td>ID</td>
+				<td>Nome</td>
+				<td>Rua</td>
+				<td>Número</td>
+				<td>Bairro</td>
+				<td>Cidade</td>
+				<td>Estado</td>
+				<td>Telefone</td>
+				<td>CPF</td>
+				<td>E-mail</td>
+				<td>Excluir</td>
+				<td>Editar</td>
+			</tr>
+			{% for pessoa in pessoas %}
+				<tr>
+					<td>{{ pessoa._id }}</td>
+					<td>{{ pessoa.nome }}</td>
+					<td>{{ pessoa.rua }}</td>
+					<td>{{ pessoa.numero }}</td>
+					<td>{{ pessoa.bairro }}</td>
+					<td>{{ pessoa.cidade }}</td>
+					<td>{{ pessoa.estado }}</td>
+					<td>{{ pessoa.fone }}</td>
+					<td>{{ pessoa.cpf }}</td>
+					<td>{{ pessoa.email }}</td>
+					<td><center><a href="/excluir/{{ pessoa._id }}">Remover</a></center></td>
+					<td><center><a href="/atualizar/{{ pessoa._id }}">Alterar</a></center></td>
+				</tr>
+			{% endfor %}
+		</table><br>
+		<a href="{{ url_for('home') }}"><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+	</body>
+</html>

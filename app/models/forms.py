@@ -3,15 +3,15 @@ from wtforms import StringField
 from wtforms.validators import DataRequired
 
 class CadastroForm(FlaskForm):
-    nome = StringField('Nome', validators=[DataRequired()])
-    rua = StringField('Rua', validators=[DataRequired()])
-    numero = StringField('Número', validators=[DataRequired()])
-    bairro = StringField('Bairro', validators=[DataRequired()])
-    cidade = StringField('Cidade', validators=[DataRequired()])
-    estado = StringField('Estado', validators=[DataRequired()])
-    fone = StringField('Fone', validators=[DataRequired()])
-    cpf = StringField('Cpf', validators=[DataRequired()])
-    email = StringField('Email', validators=[DataRequired()])
+    nome = StringField('Nome:', validators=[DataRequired()])
+    rua = StringField('Rua:', validators=[DataRequired()])
+    numero = StringField('Número:', validators=[DataRequired()])
+    bairro = StringField('Bairro:', validators=[DataRequired()])
+    cidade = StringField('Cidade:', validators=[DataRequired()])
+    estado = StringField('Estado:', validators=[DataRequired()])
+    fone = StringField('Fone:', validators=[DataRequired()])
+    cpf = StringField('Cpf:', validators=[DataRequired()])
+    email = StringField('Email:', validators=[DataRequired()])
 
     def insert_data(self, pessoa):
         self.nome.data = pessoa.nome

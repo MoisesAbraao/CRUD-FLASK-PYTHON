@@ -1,0 +1,33 @@
+{% from "macros.html" import render_field %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="static/js/bootstrap.min.js"></script>
+	<body>
+		<div class="page-header">
+			<h1>Cadastrar Cliente</h1>
+		</div>
+		<div class="panel-body">
+			<form class="navbar-form navbar-left" action="{{ url_for('home.cadastrar') }}" method="post">
+                {{ form.csrf_token }}
+				<table>
+                    {% for field in form if field.name != "csrf_token" %}
+                    <tr>
+                        {{ render_field(field, type='text', _class='form-control') }}
+                    </tr>
+                    {% endfor %}
+					</table><br>
+					<input type="submit" class="btn btn-primary btn-lg" value="Salvar Cadastro"/>
+					<a href="{{ url_for('home.home') }}" ><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+			</form>
+		</div>
+	</body>
+</html>

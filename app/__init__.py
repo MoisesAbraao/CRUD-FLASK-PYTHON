@@ -5,7 +5,7 @@ from app.blueprints import home
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object('config')
+    app.config.from_object("config")
 
     # Extensions
     db.configure(app)

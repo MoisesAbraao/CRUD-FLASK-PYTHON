@@ -21,14 +21,14 @@
 		</div>
 		<div class="panel-body">
 			<form class="navbar-form navbar-left" method="POST" action="">
-                    {{ form.csrf_token }}
-                    <table>
-                            {% for field in form if field.name != "csrf_token" %}
-                            <tr>
-                                {{ render_field(field, type='text', _class='form-control') }}
-                            </tr>
-                            {% endfor %}
-                        </table><br>
+                {{ form.csrf_token }}
+                <table>
+                    {% for field in form if field.name != "csrf_token" %}
+                    <tr>
+                        {{ render_field(field, type='text', _class='form-control') }}
+                    </tr>
+                    {% endfor %}
+                </table><br>
 				<input type="submit" class="btn btn-primary btn-lg" value="Atualizar">
 				<a href="{{ url_for('home.lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
 			</form>

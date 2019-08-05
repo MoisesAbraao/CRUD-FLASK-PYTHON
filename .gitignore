@@ -1,3 +1,6 @@
+.vscode/
+db.sqlite
+
 ### Flask ###
 instance/*
 !instance/.gitignore

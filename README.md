@@ -1,9 +1,12 @@
-#CRUD-FLASK-PYTHON
+# CRUD-FLASK-PYTHON
 This is a basic CRUD with the Flask framework and Python. It's a small system of register of clients. Very Simple! 
 
-#To use the System
- * pip install -r requirements.txt
- * python app.py
+# To use the System
+  * pip install -r requirements.txt
+  * flask db init
+  * flask db migrate
+  * flask db upgrade
+  * python wsgi.py
 
 
 # CRUD-FLASK-PYTHON
@@ -11,4 +14,7 @@ CRUD básico com FLASK+PYTHON. Um sisteminha de cadastro de clientes. Muito simp
 
 # Para usar o sistema
   * pip install -r requirements.txt
-  * python app.py
+  * flask db init
+  * flask db migrate
+  * flask db upgrade
+  * python wsgi.py

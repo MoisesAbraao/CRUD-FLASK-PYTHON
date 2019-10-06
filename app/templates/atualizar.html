@@ -4,21 +4,21 @@
 
 
 {% block content %}
-    <div class="page-header">
-        <h1>Atualizar Cliente</h1>
-    </div>
-    <div class="panel-body">
-        <form class="navbar-form navbar-left" method="POST" action="">
+    <section class="container-center">
+        <form method="POST" action="">
+            <div class="page-header">
+                <h1>Atualizar Cliente</h1>
+            </div>
             {{ form.csrf_token }}
-            <table>
-                {% for field in form if field.name != "csrf_token" %}
-                <tr>
-                    {{ render_field(field, type='text', _class='form-control') }}
-                </tr>
-                {% endfor %}
-            </table><br>
-            <input type="submit" class="btn btn-primary btn-lg" value="Atualizar">
-            <a href="{{ url_for('home.lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+            {% for field in form if field.name != "csrf_token" %}
+            <div class="form-group">
+                {{ render_field(field, type='text') }}
+            </div>
+            {% endfor %}
+            <div>
+                <input type="submit" class="btn btn-primary btn-lg" value="Atualizar">
+                <a href="{{ url_for('home.lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+            </div><br>
         </form>
-    </div>
+    </section>
 {% endblock %}

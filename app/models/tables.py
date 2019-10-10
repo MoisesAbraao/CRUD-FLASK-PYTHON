@@ -13,14 +13,3 @@ class Pessoa(db.Model):
     fone = db.Column(db.String)
     cpf = db.Column(db.String)
     email = db.Column(db.String)
-
-    def __init__(self, nome, rua, numero, bairro, cidade, estado, fone, cpf, email):
-        self.nome = nome
-        self.rua = rua
-        self.numero = numero
-        self.bairro = bairro
-        self.cidade = cidade
-        self.estado = estado
-        self.fone = fone
-        self.cpf = cpf
-        self.email = email

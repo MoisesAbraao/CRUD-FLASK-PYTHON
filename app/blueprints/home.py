@@ -16,17 +16,8 @@ def home():
 def cadastrar():
     form = CadastroForm()
     if form.validate_on_submit():
-        p = Pessoa(
-            nome=form.nome.data,
-            rua=form.rua.data,
-            numero=form.numero.data,
-            bairro=form.bairro.data,
-            cidade=form.cidade.data,
-            estado=form.estado.data,
-            fone=form.fone.data,
-            cpf=form.cpf.data,
-            email=form.email.data,
-        )
+        p = Pessoa()
+        form.populate_obj(p)
         db.session.add(p)
         db.session.commit()
         return redirect(url_for("home.home"))

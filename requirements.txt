@@ -10,3 +10,4 @@ itsdangerous>=0.24
 messages
 wsgiref>=0.1.2
 WTForms>=2.2.1
+python-decouple

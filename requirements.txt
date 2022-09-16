@@ -15,7 +15,7 @@ jeepney==0.4.1
 Jinja2==2.10.3
 jsonconfig-tool==1.5
 keyring==19.2.0
-Mako==1.1.0
+Mako==1.2.2
 MarkupSafe==1.1.1
 messages==0.5.0
 pycparser==2.19
